@@ -56,6 +56,21 @@ public class Dni {
                 return  number + "-" + LETRAS[number % 23];
         }
 
+        public String toFormattedString(){
+            String strNumber = "" + number;
+            String s = "";
+            if (number > 999){
+                s += "." + strNumber.substring(strNumber.length() - 3, strNumber.length());
+            } if (number > 999999){
+                s = strNumber.substring(0, strNumber.length() - 6) + "." +
+                         strNumber.substring(strNumber.length() - 6, strNumber.length() - 3) + s;
+            } else {
+                s = strNumber;
+            }
+            s += "-" + letra;
+            return s;
+        }
+
         @Override
         public String toString(){
                 return number + "-" + letra;

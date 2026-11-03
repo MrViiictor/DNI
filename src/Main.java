@@ -6,6 +6,6 @@ public class Main {
         Dni dni2 = new Dni(54879218, 'T');
         System.out.println(dni2);
         System.out.println(dni2.isCorrect());
-
+        System.out.println(dni1.toFormattedString());
     }
 }
